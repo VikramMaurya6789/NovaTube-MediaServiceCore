@@ -42,9 +42,7 @@ android {
     flavorDimensions "default"
 
     productFlavors {
-        stbeta {}
-        ststable {}
-        stfdroid {}
+        novatube {}
     }
 }
 
@@ -90,9 +88,7 @@ dependencies {
     //implementation(name: 'j2v8-6.2.1', ext: 'aar')
     //implementation files('libs/j2v8-6.2.1-fixed.aar')
     // https://stackoverflow.com/questions/60878599/error-building-android-library-direct-local-aar-file-dependencies-are-not-supp
-    stbetaImplementation project(':j2v8')
-    ststableImplementation project(':j2v8')
-    stfdroidImplementation 'com.eclipsesource.j2v8:j2v8:' + j2v8Version + '@aar'
+    novatubeImplementation project(':j2v8') // NovaTube: single flavor
 
     // Add kotlin support libs
     implementation 'androidx.core:core-ktx:' + kotlinCoreXVersion
